@@ -1,2 +1,2 @@
 # Direct-Link
-Xuất liên kết tải trực tiếp từ One Drive Google Drive và Drop Box
+Xuất liên kết tải trực tiếp từ OneDrive Dropbox và Google Drive
