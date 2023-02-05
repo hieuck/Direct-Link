@@ -25,11 +25,15 @@ def main():
 
     new_links = []
     for link in links:
-        new_link_o = new_link_d = new_link_g = None
+        new_link_o = new_links_ob = new_link_d = new_link_g = None
         if "onedrive.live.com" in link:
             if re.search(r"https://.*width=", link):
                 new_link_o = re.sub(r"embed", "download", re.search(r"https://.*width=", link).group())
                 new_link_o = new_link_o.rstrip("\" width=")
+        elif "my.sharepoint.com" in link:
+            if re.search(r"https://.*\?", link):
+                new_links_ob = re.search(r"https://.*\?", link).group()
+                new_links_ob = new_links_ob + "download=1"
         elif "www.dropbox.com" in link:
             new_link_d = link.replace("www.dropbox.com", "dl.dropboxusercontent.com")
         elif "drive.google.com" in link:
@@ -37,10 +41,10 @@ def main():
             if google_drive_link:
                 new_link_g = "https://drive.google.com/uc?export=download&id=" + google_drive_link.group(1)
 
-        if new_link_o or new_link_d or new_link_g:
-            new_links.append(new_link_o or new_link_d or new_link_g)
+        if new_link_o or new_links_ob or new_link_d or new_link_g:
+            new_links.append(new_link_o or new_links_ob or new_link_d or new_link_g)
         else:
-            print(f"{link} is not a link from OneDrive, Dropbox, or Google Drive.")
+            print(f"{link} is not a link from OneDrive, OneDrive for Business, Dropbox, or Google Drive.")
 
     if new_links:
         print("\n".join(new_links))
