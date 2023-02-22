@@ -58,11 +58,20 @@ def main():
             with open("output.txt", "w") as f:              # Attempt to open output.txt for writing
                 for l in new_links:                         # Iterate through all the new links
                     f.write(l + "\n")
-        except:
+        except:                                             # Catch any errors that may occur while opening the file
             print("An error occurred while opening the file. Exiting.")
             exit()
-    else:
+    else:                                                   # If no links are found, notify the user
         print("No links found.")
 
 if __name__ == "__main__":
     main()
+	
+while True:                         # Continues until the user chooses to exit
+    option = input("Press R to restart script, Press E to Exit: ")              # Prompts the user for an input
+    if option.upper() == "R":               # Checks if R was pressed and restarts the script
+        exec(open(__file__).read())
+    elif option.upper() == "E":             # Checks if E was pressed and exits the loop
+        exit()
+        break
+
