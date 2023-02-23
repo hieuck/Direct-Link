@@ -1,16 +1,14 @@
 # Direct-Link
-Xuất liên kết tải trực tiếp từ OneDrive Dropbox và Google Drive
+Xuất liên kết tải trực tiếp từ OneDrive, OneDrive for Business, Dropbox và Google Drive
 
-Direct Link Google Drive, OneDrive, DropBox by ChatGPT 
+Direct Link Google Drive, OneDrive, OneDrive for Business, DropBox by ChatGPT 
 
-Từ một người không hiểu 1 lệnh nào của Python nhờ sự trợ giúp của ChatGPT nên tôi đã tự thiết kế được cho mình 1 phần mềm (tôi thích gọi nó là Script hơn) nhỏ chạy bằng Python để tạo liên kết tải xuống trực tiếp cho OneDrive, Dropbox và Google Drive 
-
-Giới thiệu (hỗ trợ bởi ChatGPT)
-Script này được xây dựng với mục đích giúp người dùng chuyển đổi các liên kết từ OneDrive, Dropbox và Google Drive thành liên kết tải xuống. Nó có thể đọc liên kết từ tập tin hoặc nhập từ bàn phím và ghi kết quả vào tập tin.
+Giới thiệu
+Script này được xây dựng với mục đích giúp người dùng chuyển đổi các liên kết từ OneDrive, OneDrive for Business, Dropbox và Google Drive thành liên kết tải xuống. Nó có thể đọc liên kết từ tập tin hoặc nhập từ bàn phím và ghi kết quả vào tập tin.
 
 Các chức năng chính:
 Đọc các liên kết từ tập tin hoặc nhập từ bàn phím
-Chuyển đổi các liên kết từ OneDrive, Dropbox và Google Drive thành liên kết tải xuống
+Chuyển đổi các liên kết từ OneDrive, OneDrive for Business, Dropbox và Google Drive thành liên kết tải xuống
 Hiển thị liên kết trực tiếp sau khi chuyển đổi
 Ghi kết quả vào tập tin
 
